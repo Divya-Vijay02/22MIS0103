@@ -1,3 +1,4 @@
+const authHeader = require("../config/auth");
 
 const axios = require("axios");
 require("dotenv").config();
@@ -16,11 +17,7 @@ async function Log(stack, level, packageName, message) {
                 package: packageName,
                 message
             },
-            {
-                headers: {
-                    Authorization: `Bearer ${process.env.ACCESS_TOKEN}`
-                }
-            }
+            authHeader
         );
 
         console.log("Log created successfully");
