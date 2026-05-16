@@ -1,0 +1,5 @@
+```gitignore id="jlwmrf"
+node_modules/
+.env
+.DS_Store
+```
